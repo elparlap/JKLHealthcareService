@@ -1,0 +1,27 @@
+@model Appointment
+
+<h2>Schedule New Appointment</h2>
+
+<form asp-action="Create" method="post">
+<div>
+
+<label>Patient ID:</label>
+
+<input asp-for="PatientId" required />
+
+</div>
+
+<div>
+
+<label>Date & Time:</label>
+
+<input asp-for="DateTime" type="datetime-local" required />
+
+</div>
+
+<button type="submit">Schedule Appointment</button>
+
+<a href="@Url.Action("Index")">Back to Appointments</a>
+
+</form>
+

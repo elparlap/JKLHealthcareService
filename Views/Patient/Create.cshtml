@@ -1,0 +1,21 @@
+@model Patient
+
+<h2>Add New Patient</h2>
+
+<form asp-action="Create" method="post">
+<div>
+<label>Name:</label>
+<input asp-for="Name" required />
+</div>
+<div>
+<label>Address:</label>
+<input asp-for="Address" required />
+</div>
+<div>
+<label>Medical Records:</label>
+<input asp-for="MedicalRecords" required />
+</div>
+<button type="submit">Add Patient</button>
+</form>
+
+<a href="@Url.Action("Index")">Back to Patients</a>

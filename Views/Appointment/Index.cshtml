@@ -1,0 +1,31 @@
+@model IEnumerable<Appointment>
+
+<h2>Appointments</h2>
+<a href="@Url.Action("Create")">Schedule New Appointment</a>
+
+<table>
+<thead>
+<tr>
+<th>Patient ID</th>
+<th>Date & Time</th>
+</tr>
+</thead>
+
+<tbody>
+
+@foreach (var appointment in Model)
+{
+<tr>
+
+<td>@appointment.PatientId</td>
+
+<td>@appointment.DateTime.ToString("g")</td>
+
+</tr>
+
+}
+
+</tbody>
+
+</table>
+

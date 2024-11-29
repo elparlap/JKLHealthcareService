@@ -1,0 +1,20 @@
+@model Caregiver
+
+<h2>Add New Caregiver</h2>
+
+<form asp-action="Create" method="post">
+<div>
+<label>Name:</label>
+<input asp-for="Name" required />
+</div>
+<div>
+<label>Assigned Patient ID:</label>
+<input asp-for="AssignedPatientId" required />
+</div>
+
+<button type="submit">Add Caregiver</button>
+
+<a href="@Url.Action("Index")">Back to Caregivers</a>
+
+</form>
+
